@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import telebot
-import config
+# from opt.gibot.etc import config
 import logging, sys
 import logging.config
 
@@ -10,8 +10,8 @@ logging.basicConfig(stream=sys.stderr)
 logging.config.fileConfig('/opt/gibot/etc/logging_config.ini')
 logger = logging.getLogger('wsgi')
 
-
-bot = telebot.TeleBot(config.token,threaded=False)
+token = '315541385:AAE6xaRFr7pi81ihcgz9DnUfO4tCRjRUoBU'
+bot = telebot.TeleBot(token,threaded=False)
 
 def application(environ, start_response):
     try:
